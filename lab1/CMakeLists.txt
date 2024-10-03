@@ -15,5 +15,4 @@ add_executable(lab1
         src/utils.hpp
 )
 
-add_compile_options("-O2")
 target_link_libraries(lab1 PRIVATE Boost::headers)
