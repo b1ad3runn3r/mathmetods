@@ -4,7 +4,7 @@ project("lab1" CXX)
 set(CMAKE_CXX_STANDARD 20)
 
 find_package(Boost)
-
+add_compile_options("-O0")
 add_executable(lab1
         src/main.cpp
         src/storage.hpp

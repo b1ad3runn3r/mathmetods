@@ -7,11 +7,12 @@ namespace storage {
     class Storage {
     private:
         std::vector<boost::dynamic_bitset<>> matrix;
+        size_t power;
 
     public:
         explicit Storage(size_t vec_size);
-        [[nodiscard]] bool get_value(const boost::dynamic_bitset<>& a, const boost::dynamic_bitset<>& b) const noexcept;
-        [[nodiscard]] bool get_value(uint32_t a, uint32_t b) const noexcept;
+        [[nodiscard]] bool multiply(const std::vector<uint64_t> &a_nums, const std::vector<uint64_t> &b_nums) const noexcept;
+        [[nodiscard]] bool get_value(const uint64_t a, const uint64_t b) const {return matrix.at(a).at(b); }
     };
 }
 
